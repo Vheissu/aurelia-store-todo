@@ -1,27 +1,22 @@
 import { Store } from 'aurelia-store';
 
-const addTodo = (state) => {
-  const newState = Object.assign({}, state);
-  const newTodo = {
-    text: 'My todo'
-  };
-
-  newState.todos.push(newTodo);
-  newState.activeTodo = newTodo;
-
-  return newState;
-}
-
-const editTodo = (state, text) => {
-  const newState = Object.assign({}, state);
-
-  newState.activeTodo.text = text;
-
-  return newState;
-};
+import * as Actions from './actions';
 
 export class App {
-  constructor() {
-    this.message = 'Hello World!';
+  static inject = [Store];
+
+  constructor(store) {
+    this.store = store;
+    this.actions = Actions;
+    
+    // Add an initial todo
+    Actions.addTodo();
+  }
+
+  attached() {
+    this.store.state.subscribe((state) => {
+      this.state = state;
+      console.log(state);
+    });
   }
 }

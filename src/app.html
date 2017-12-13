@@ -1,3 +1,8 @@
 <template>
-  <h1>${message}</h1>
+  <h1>Todos</h1>
+  
+    <ul>
+      <li repeat.for="todo of state.todos">${todo.text}</li>
+    </ul>
+    <button type="button" click.delegate="actions.addTodo()">Add todo</button>
 </template>
