@@ -3,16 +3,14 @@ import { Store } from 'aurelia-store';
 
 const store = Container.instance.get(Store);
 
-function addTodo(state) {
+function addTodo(state, text) {
   const newState = Object.assign({}, state);
   const newTodo = {
-    text: 'My todo ' + Math.floor(Math.random() * ((state.todos.length || 100) + 1))
+    text: `${text}`
   };
 
   newState.todos.push(newTodo);
   newState.activeTodo = newTodo;
-
-  console.log('New', newState);
 
   return newState;
 }

@@ -5,8 +5,8 @@ const store = Container.instance.get(Store);
 
 import * as Mutations from './mutations';
 
-function addTodo() {
-  store.dispatch(Mutations.addTodo);
+function addTodo(text = '') {
+  store.dispatch(Mutations.addTodo, text);
 }
 
 function editTodo() {
