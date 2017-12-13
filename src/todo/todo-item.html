@@ -1,6 +1,9 @@
 <template>
   <div click.delegate="selectItem()">
-    <input type="text" value.bind="data.text" if.bind="data.isEditing">
+    <div class="input-group" if.bind="data.isEditing">
+      <input type="text" class="form-control" value.bind="data.text">
+      <span class="input-group-addon" click.delegate="saveChanges()">Save</span>
+    </div>
     <span else>${data.text}</span>
   </div>
 </template>

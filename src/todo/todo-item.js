@@ -1,12 +1,18 @@
 import { bindable, containerless } from 'aurelia-framework';
 
-import { setActiveTodo } from '../actions';
+import { activateTodoEditMode, editTodo } from '../actions';
 
 @containerless()
 export class TodoItem {
   @bindable() data;
 
   selectItem() {
-    setActiveTodo(this.data);
+    if (!this.data.isEditing) {
+      activateTodoEditMode(this.data);
+    }
+  }
+
+  saveChanges() {
+    editTodo(this.data);
   }
 }

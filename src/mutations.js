@@ -14,41 +14,54 @@ function addTodo(state, text) {
   };
 
   newState.todos.push(newTodo);
-  newState.activeTodo = newTodo;
 
   return newState;
 }
 
-function editTodo(state, text) {
+function editTodo(state, todo) {
   const newState = Object.assign({}, state);
+  const todoIdx = newState.todos.findIndex((t) => t === todo);
 
-  newState.activeTodo.text = text;
+  newState.todos = [
+    ...newState.todos.slice(0, todoIdx),
+    Object.assign({}, todo, { isEditing: false }),
+    ...newState.todos.slice(todoIdx + 1)
+  ];
 
   return newState;
 }
 
 function deleteTodo(state) {
-  const newState = Object.assign({}, state);
-  const filtered = newState.todos.filter(todo => todo.text !== newState.activeTodo.text);
+  // const newState = Object.assign({}, state);
+  // const filtered = newState.todos.filter(todo => todo.text !== newState.activeTodo.text);
 
-  newState.todos = filtered;
-  newState.activeTodo = newState.todos[0];
+  // newState.todos = filtered;
+  // newState.activeTodo = newState.todos[0];
 
-  return newState;
+  // return newState;
 }
 
-function setActiveTodo(state, todo) {
-  return Object.assign({}, state, { activeTodo: todo });
+function activateTodoEditMode(state, todo) {
+  const newState = Object.assign({}, state);
+  const todoIdx = newState.todos.findIndex((t) => t === todo);
+
+  newState.todos = [
+    ...newState.todos.slice(0, todoIdx),
+    Object.assign({}, todo, { isEditing: true }),
+    ...newState.todos.slice(todoIdx + 1)
+  ];
+
+  return newState;
 }
 
 store.registerAction('addTodo', addTodo);
 store.registerAction('editTodo', editTodo);
 store.registerAction('deleteTodo', deleteTodo);
-store.registerAction('setActiveTodo', setActiveTodo);
+store.registerAction('activateTodoEditMode', activateTodoEditMode);
 
 export {
   addTodo,
   editTodo,
   deleteTodo,
-  setActiveTodo
+  activateTodoEditMode
 };

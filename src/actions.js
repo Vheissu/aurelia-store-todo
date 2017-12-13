@@ -9,21 +9,21 @@ function addTodo(text = '') {
   store.dispatch(Mutations.addTodo, text);
 }
 
-function editTodo() {
-  store.dispatch(Mutations.editTodo);
+function editTodo(todo) {
+  store.dispatch(Mutations.editTodo, todo);
 }
 
 function deleteTodo() {
   store.dispatch(Mutations.deleteTodo);
 }
 
-function setActiveTodo(todo) {
-  store.dispatch(Mutations.setActiveTodo, todo);
+function activateTodoEditMode(todo) {
+  store.dispatch(Mutations.activateTodoEditMode, todo);
 }
 
 export {
   addTodo,
   editTodo,
   deleteTodo,
-  setActiveTodo
+  activateTodoEditMode
 };
