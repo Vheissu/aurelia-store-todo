@@ -12,7 +12,7 @@ const when = (condition, config, negativeConfig) =>
   condition ? ensureArray(config) : ensureArray(negativeConfig);
 
 // primary config:
-const title = 'Aurelia Navigation Skeleton';
+const title = 'Aurelia Store Todo';
 const outDir = path.resolve(__dirname, project.platform.output);
 const srcDir = path.resolve(__dirname, 'src');
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
@@ -20,6 +20,12 @@ const baseUrl = '/';
 
 const cssRules = [
   { loader: 'css-loader' },
+  {
+    loader: 'postcss-loader',
+    options: {
+      plugins: () => [require('precss'), require('autoprefixer')]
+    }
+  }
 ];
 
 module.exports = ({production, server, extractCss, coverage} = {}) => ({
@@ -59,18 +65,35 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
       {
         test: /\.css$/i,
         issuer: [{ test: /\.html$/i }],
-        // CSS required in templates cannot be extracted safely
-        // because Aurelia would try to require it again in runtime
         use: cssRules
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          { loader: 'style-loader' }, 
+          { loader: 'css-loader' }, 
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [require('precss'), require('autoprefixer')]
+            }
+          }, 
+          { loader: 'sass-loader' }
+        ],
         issuer: /\.[tj]s$/i
       },
       {
         test: /\.scss$/,
-        use: ['css-loader', 'sass-loader'],
+        use: [
+          { loader: 'css-loader' }, 
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [require('precss'), require('autoprefixer')]
+            }
+          }, 
+          { loader: 'sass-loader' }
+        ],
         issuer: /\.html?$/i
       },
       { test: /\.html$/i, loader: 'html-loader' },
@@ -91,7 +114,11 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
   plugins: [
     new AureliaPlugin(),
     new ProvidePlugin({
-      'Promise': 'bluebird'
+      'Promise': 'bluebird',
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default']
     }),
     new ModuleDependenciesPlugin({
       'aurelia-testing': [ './compile-spy', './view-spy' ]

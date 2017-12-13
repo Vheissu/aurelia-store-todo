@@ -5,6 +5,8 @@ import * as Bluebird from 'bluebird';
 
 import state from './state';
 
+import './styles/application.scss';
+
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
 export function configure(aurelia) {
