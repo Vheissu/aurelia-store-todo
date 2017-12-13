@@ -1,9 +1,11 @@
 <template>
-  <h1>Todos</h1>
+  <div id="todos">
+      <h1>Todos</h1>
   
-  <todo-list todos.bind="state.todos"></todo-list>
-  <todo-actions></todo-actions>
-
-  <br /><br />
-  Active todo: ${state.activeTodo.text}
+      <todo-list todos.bind="state.todos"></todo-list>
+      <todo-actions></todo-actions>
+    
+      <br /><br />
+      Active todo: ${state.activeTodo.text}
+  </div>
 </template>
