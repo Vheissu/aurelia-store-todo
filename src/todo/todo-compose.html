@@ -1,0 +1,8 @@
+<template>
+  <form role="form" class="form-inline">
+    <div class="form-group">
+      <input type="email" class="form-control" id="todoComposeInput" placeholder="Your todo..." value.bind="composedTodo">
+    </div>
+    <button type="submit" class="btn btn-primary ml-2" click.delegate="addTodo()">Add</button>
+  </form>
+</template>
