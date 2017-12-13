@@ -1,0 +1,22 @@
+.todos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.todos__item {
+  margin: 0;
+  padding: 15px;
+
+  &.au-enter {
+    opacity: 0 !important;
+  }
+
+  &.au-enter-active {
+    animation: fadeIn 0.8s;
+  }
+
+  &.au-leave-active {
+    animation: fadeOut 0.8s;
+  }
+}

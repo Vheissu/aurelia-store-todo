@@ -1,6 +1,6 @@
 <template>
-  <ul>
-    <li repeat.for="todo of todos">
+  <ul class="todos au-stagger">
+    <li class="todos__item au-animate" repeat.for="todo of todos">
       <todo-item data.bind="todo"></todo-item>
     </li>
   </ul>
