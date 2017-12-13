@@ -6,7 +6,7 @@ const store = Container.instance.get(Store);
 function addTodo(state, text) {
   const newState = Object.assign({}, state);
   const newTodo = {
-    text: `${text}`
+    text: text
   };
 
   newState.todos.push(newTodo);
