@@ -1,9 +1,9 @@
 <template>
-  <div class="todo" click.delegate="selectItem()">
+  <div class="todo" dblclick.trigger="selectItem()" click.delegate="completeTodo()">
     <div class="input-group" if.bind="data.isEditing">
       <input type="text" focus.bind="data.isEditing" class="form-control" value.bind="data.text">
       <span class="input-group-addon todo__save" click.delegate="saveChanges()">Save</span>
     </div>
-    <span else>${data.text}</span>
+    <span class="todo__text" else>${data.text}</span>
   </div>
 </template>

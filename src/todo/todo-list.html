@@ -1,6 +1,6 @@
 <template>
   <ul class="todos au-stagger">
-    <li class="todos__item au-animate bg-${todo.background}" repeat.for="todo of todos">
+    <li class="todos__item ${todo.isComplete ? 'todos__item--disabled' : ''} au-animate bg-${todo.background}" repeat.for="todo of todos">
       <todo-item data.bind="todo"></todo-item>
     </li>
   </ul>

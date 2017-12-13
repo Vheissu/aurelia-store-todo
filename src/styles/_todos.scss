@@ -1,4 +1,4 @@
-$todoAnimSpeed: 0.5s;
+$todoAnimSpeed: 0.1s;
 
 todo-list {
   display: block;
@@ -13,6 +13,14 @@ todo-list {
   &__item {
     margin: 0;
     padding: 15px;
+
+    &--disabled {
+      opacity: 0.3;
+  
+      .todo__text {
+        text-decoration: line-through;
+      }
+    }
   
     &.au-enter {
       opacity: 0 !important;
