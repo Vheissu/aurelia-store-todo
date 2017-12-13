@@ -10,7 +10,7 @@ Bluebird.config({ warnings: { wForgottenReturn: false } });
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature(PLATFORM.moduleName('resources/index'));
+    .feature(PLATFORM.moduleName('todo/index'));
 
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));
 

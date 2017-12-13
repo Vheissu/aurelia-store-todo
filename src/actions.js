@@ -18,7 +18,7 @@ function deleteTodo() {
 }
 
 function setActiveTodo(todo) {
-  store.disaptch(Mutations.setActiveTodo, todo);
+  store.dispatch(Mutations.setActiveTodo, todo);
 }
 
 export {
@@ -26,4 +26,4 @@ export {
   editTodo,
   deleteTodo,
   setActiveTodo
-}
+};
