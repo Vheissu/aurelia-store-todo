@@ -1,8 +1,8 @@
 <template>
-  <div click.delegate="selectItem()">
+  <div class="todo" click.delegate="selectItem()">
     <div class="input-group" if.bind="data.isEditing">
-      <input type="text" class="form-control" value.bind="data.text">
-      <span class="input-group-addon" click.delegate="saveChanges()">Save</span>
+      <input type="text" focus.bind="data.isEditing" class="form-control" value.bind="data.text">
+      <span class="input-group-addon todo__save" click.delegate="saveChanges()">Save</span>
     </div>
     <span else>${data.text}</span>
   </div>
