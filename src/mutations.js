@@ -6,7 +6,7 @@ const store = Container.instance.get(Store);
 function addTodo(state) {
   const newState = Object.assign({}, state);
   const newTodo = {
-    text: 'My todo'
+    text: 'My todo ' + Math.floor(Math.random() * ((state.todos.length || 100) + 1))
   };
 
   newState.todos.push(newTodo);
@@ -36,11 +36,7 @@ function deleteTodo(state) {
 }
 
 function setActiveTodo(state, todo) {
-  const newState = Object.assign({}, state);
-  
-  newState.activeTodo = todo;
-  
-  return newState;
+  return Object.assign({}, state, { activeTodo: todo });
 }
 
 store.registerAction('addTodo', addTodo);
@@ -53,4 +49,4 @@ export {
   editTodo,
   deleteTodo,
   setActiveTodo
-}
+};
