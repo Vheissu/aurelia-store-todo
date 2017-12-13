@@ -1,7 +1,4 @@
-import {
-  bindable,
-  containerless
-} from 'aurelia-framework';
+import { bindable, containerless } from 'aurelia-framework';
 
 import { setActiveTodo } from '../actions';
 

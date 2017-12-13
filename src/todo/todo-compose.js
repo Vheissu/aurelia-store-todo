@@ -1,14 +1,11 @@
 import { containerless } from 'aurelia-framework';
-import { Store } from 'aurelia-store';
 import * as Actions from '../actions';
 
 @containerless()
 export class TodoCompose {
-  static inject = [Store];
-
   composedTodo = '';
   
-  constructor(store) {
+  constructor() {
     this.actions = Actions;
   }
 

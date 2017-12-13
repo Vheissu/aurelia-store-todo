@@ -1,11 +1,15 @@
 import { Container } from 'aurelia-dependency-injection';
 import { Store } from 'aurelia-store';
 
+import colours from './colours';
+
 const store = Container.instance.get(Store);
 
 function addTodo(state, text) {
   const newState = Object.assign({}, state);
   const newTodo = {
+    background: colours[Math.floor(Math.random() * colours.length)],
+    isEditing: false,
     text: text
   };
 

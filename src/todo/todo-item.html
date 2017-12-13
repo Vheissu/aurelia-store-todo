@@ -1,3 +1,6 @@
 <template>
-  <div click.delegate="selectItem()">${data.text}</div>
+  <div click.delegate="selectItem()">
+    <input type="text" value.bind="data.text" if.bind="data.isEditing">
+    <span else>${data.text}</span>
+  </div>
 </template>
