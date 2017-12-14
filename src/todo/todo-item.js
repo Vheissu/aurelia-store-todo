@@ -13,7 +13,9 @@ export class TodoItem {
   }
 
   completeTodo() {
-    completeTodo(this.data);
+    if (!this.data.isEditing) {
+      completeTodo(this.data);
+    }
   }
 
   saveChanges() {
