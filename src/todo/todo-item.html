@@ -1,7 +1,7 @@
 <template>
   <div class="todo" dblclick.trigger="selectItem()" click.delegate="completeTodo() & debounce">
     <div class="input-group" if.bind="data.isEditing">
-      <input type="text" focus.bind="data.isEditing" class="form-control" value.bind="data.text">
+      <input type="text" focus.one-time="true" class="form-control" value.bind="data.text">
       <span class="input-group-addon todo__save" click.delegate="saveChanges()">Save</span>
     </div>
     <span class="todo__text" else>${data.text}</span>
