@@ -12,7 +12,7 @@ function addTodo(state, text) {
     background: colours[Math.floor(Math.random() * colours.length)],
     isEditing: false,
     isComplete: false,
-    text: text
+    text
   };
 
   const newState = Object.assign({}, state, { todos: [...state.todos, newTodo] });
