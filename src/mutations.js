@@ -6,14 +6,14 @@ import colours from './colours';
 const store = Container.instance.get(Store);
 
 function addTodo(state, text) {
-  const newState = Object.assign({}, state);
   const newTodo = {
     background: colours[Math.floor(Math.random() * colours.length)],
     isEditing: false,
+    isComplete: false,
     text: text
   };
 
-  newState.todos.push(newTodo);
+  const newState = Object.assign({}, state, { todos: [...state.todos, newTodo] });
 
   return newState;
 }
