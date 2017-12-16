@@ -7,7 +7,7 @@
       </div>
     </form>
     <div else>
-      <input type="checkbox" class="todo__toggle-completed" checked.bind="data.isCompleted" change.delegate="completeTodo()">
+      <input type="checkbox" class="todo__toggle-completed" checked.one-way="data.isComplete" change.delegate="completeTodo()">
       <span dblclick.trigger="selectItem()" class="todo__text">${data.text}</span>
     </div>
   </div>
