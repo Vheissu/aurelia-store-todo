@@ -1,12 +1,14 @@
 import { Container } from 'aurelia-dependency-injection';
 import { Store } from 'aurelia-store';
 
+import { guid } from './helper';
 import colours from './colours';
 
 const store = Container.instance.get(Store);
 
 function addTodo(state, text) {
   const newTodo = {
+    id: guid(),
     background: colours[Math.floor(Math.random() * colours.length)],
     isEditing: false,
     isComplete: false,
@@ -19,29 +21,15 @@ function addTodo(state, text) {
 }
 
 function editTodo(state, todo) {
-  const newState = Object.assign({}, state);
-  const todoIdx = newState.todos.findIndex((t) => t === todo);
+  todo.isEditing = false;
 
-  newState.todos = [
-    ...newState.todos.slice(0, todoIdx),
-    Object.assign({}, todo, { isEditing: false }),
-    ...newState.todos.slice(todoIdx + 1)
-  ];
-
-  return newState;
+  return updateTodoCollection(state, todo);
 }
 
 function completeTodo(state, todo) {
-  const newState = Object.assign({}, state);
-  const todoIdx = newState.todos.findIndex((t) => t === todo);
+  todo.isComplete = !todo.isComplete;
 
-  newState.todos = [
-    ...newState.todos.slice(0, todoIdx),
-    Object.assign({}, todo, { isComplete: !todo.isComplete }),
-    ...newState.todos.slice(todoIdx + 1)
-  ];
-
-  return newState;
+  return updateTodoCollection(state, todo);
 }
 
 function deleteTodo(state) {
@@ -55,12 +43,18 @@ function deleteTodo(state) {
 }
 
 function activateTodoEditMode(state, todo) {
+  todo.isEditing = true;
+
+  return updateTodoCollection(state, todo);
+}
+
+function updateTodoCollection(state, todo) {
   const newState = Object.assign({}, state);
-  const todoIdx = newState.todos.findIndex((t) => t === todo);
+  const todoIdx = newState.todos.findIndex((t) => t.id === todo.id);
 
   newState.todos = [
     ...newState.todos.slice(0, todoIdx),
-    Object.assign({}, todo, { isEditing: true }),
+    todo,
     ...newState.todos.slice(todoIdx + 1)
   ];
 
