@@ -1,14 +1,18 @@
 <template>
-  <div class="todo">
-    <form if.bind="data.isEditing">
-      <div class="input-group">
-        <input type="text" focus.one-time="true" class="form-control" value.bind="data.text">
-        <input type="submit" class="input-group-addon todo__save" click.delegate="saveChanges()" value="Save" />
-      </div>
-    </form>
-    <div else>
-      <input type="checkbox" class="todo__toggle-completed" checked.one-way="data.isComplete" change.delegate="completeTodo()">
-      <span dblclick.trigger="selectItem()" class="todo__text">${data.text}</span>
+  <template if.bind="data.isEditing">
+    <div class="list-content">
+      <ux-input focus.one-time="true" value.bind="data.text"></ux-input>
     </div>
-  </div>
+    <div class="action-item">
+      <ux-button type="flat" click.delegate="saveChanges()" theme.bind="{flatForeground: '#fff'}">Save Changes</ux-button>
+    </div>
+  </template>
+  <template else>
+    <div class="detail">
+      <ux-checkbox checked.bind="data.isComplete" change.delegate="completeTodo()" theme.bind="{border: '2px solid #333'}"></ux-checkbox>
+    </div>
+    <div class="list-content" dblclick.trigger="selectItem()">
+      ${data.text}
+    </div>
+  </template>
 </template>

@@ -16,6 +16,10 @@ export function configure(aurelia) {
 
   aurelia.use.plugin(PLATFORM.moduleName('aurelia-animator-css'));
 
+  aurelia.use
+    .plugin(PLATFORM.moduleName('@aurelia-ux/core'))
+    .plugin(PLATFORM.moduleName('@aurelia-ux/components'));
+
   if (environment.debug) {
     aurelia.use.developmentLogging();
   }

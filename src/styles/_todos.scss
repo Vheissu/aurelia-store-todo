@@ -6,33 +6,24 @@ todo-list {
 }
 
 .todos {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .done {
+    opacity: 0.8;
+    
+    .list-content {
+      text-decoration: line-through;
+    }
+  }
 
-  &__item {
-    margin: 0;
-    padding: 15px;
+  &.au-enter {
+    opacity: 0 !important;
+  }
 
-    &--disabled {
-      opacity: 0.3;
-  
-      .todo__text {
-        text-decoration: line-through;
-      }
-    }
-  
-    &.au-enter {
-      opacity: 0 !important;
-    }
-  
-    &.au-enter-active {
-      animation: fadeIn $todoAnimSpeed;
-    }
-  
-    &.au-leave-active {
-      animation: fadeOut $todoAnimSpeed;
-    }
+  &.au-enter-active {
+    animation: fadeIn $todoAnimSpeed;
+  }
+
+  &.au-leave-active {
+    animation: fadeOut $todoAnimSpeed;
   }
 }
 
@@ -40,4 +31,16 @@ todo-list {
   &__save {
     cursor: pointer;
   }
+}
+
+todo-actions {
+  display: flex;
+}
+
+todo-actions ux-input {
+  margin-right: 16px;
+}
+
+todo-actions input {
+  color: white;
 }
