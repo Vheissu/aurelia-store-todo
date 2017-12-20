@@ -16,3 +16,22 @@ h1 {
 }
 
 @import "animations";
+
+// aurelia ux checkbox bug fix
+// can be removed after the release of 0.7.0
+
+#todos ux-checkbox>.checkbox>.background-box {
+  width: 20px;
+  height: 20px;
+  margin: -2px;
+}
+
+#todos ux-checkbox.checked>.checkbox>.background-box {
+  border-radius: 3px;
+}
+
+#todos ux-checkbox>.checkbox>.background-box>svg {
+  fill: var(--ux-theme--checkbox-checkmark-color);
+  width: 20px;
+  height: 20px;
+}

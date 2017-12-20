@@ -1,7 +1,8 @@
 <template>
-  <ul class="todos au-stagger">
-    <li class="todos__item ${todo.isComplete ? 'todos__item--disabled' : ''} au-animate bg-${todo.background}" repeat.for="todo of todos">
+  <ux-list class="todos">
+    <div class="ux-list-item ${todo.isComplete ? 'done' : ''} au-animate bg-${todo.background}"
+      repeat.for="todo of todos">
       <todo-item data.bind="todo"></todo-item>
-    </li>
-  </ul>
+    </div>
+  </ux-list>
 </template>
