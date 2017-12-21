@@ -2,6 +2,111 @@
 # yarn lockfile v1
 
 
+"@aurelia-ux/button@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/button/-/button-0.6.0.tgz#c38718205c7a9dbdda304c03dc3daac115635490"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/checkbox@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/checkbox/-/checkbox-0.6.0.tgz#51ee5faf296aaaf1e3876581415e44de44fac63b"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/chip-input@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/chip-input/-/chip-input-0.6.0.tgz#873f7e96a32dcbed1d60f4263cfbbd4f82c605d2"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/components@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/components/-/components-0.6.0.tgz#8f5e7f894994eee2495c5b5d37c523e2f8481807"
+  dependencies:
+    "@aurelia-ux/button" "^0.6.0"
+    "@aurelia-ux/checkbox" "^0.6.0"
+    "@aurelia-ux/chip-input" "^0.6.0"
+    "@aurelia-ux/core" "^0.6.0"
+    "@aurelia-ux/datepicker" "^0.6.0"
+    "@aurelia-ux/form" "^0.6.0"
+    "@aurelia-ux/input" "^0.6.0"
+    "@aurelia-ux/input-info" "^0.6.0"
+    "@aurelia-ux/list" "^0.6.0"
+    "@aurelia-ux/radio" "^0.6.0"
+    "@aurelia-ux/switch" "^0.6.0"
+    "@aurelia-ux/textarea" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/core@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/core/-/core-0.6.0.tgz#13782a5e38240cd32ede3327c39584ad1243c716"
+  dependencies:
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/datepicker@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/datepicker/-/datepicker-0.6.0.tgz#1d47a0fd64a81b439be517298129f32914a29b2d"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+    moment "^2.18.1"
+
+"@aurelia-ux/form@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/form/-/form-0.6.0.tgz#8063b5706f5159e99f2b60eb087e6aaf8acf770b"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/input-info@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/input-info/-/input-info-0.6.0.tgz#7de9321bad47b0026784022039e58d6392389f41"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+    moment "^2.18.1"
+
+"@aurelia-ux/input@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/input/-/input-0.6.0.tgz#7b6a5655d8e5662dfee45f5a4530971a44fa5349"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/list@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/list/-/list-0.6.0.tgz#fe85c1dcd985ab594b79c151214e5965953394a0"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+    moment "^2.18.1"
+
+"@aurelia-ux/radio@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/radio/-/radio-0.6.0.tgz#735a894efa7bdc85e8ec3e027a1817bc1b3733bd"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/switch@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/switch/-/switch-0.6.0.tgz#f6d74db9f74585debfd5dfb8082b9f8002748a57"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+
+"@aurelia-ux/textarea@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@aurelia-ux/textarea/-/textarea-0.6.0.tgz#0812d419d8bce8fb1933f127d736abfd2e8fef63"
+  dependencies:
+    "@aurelia-ux/core" "^0.6.0"
+    aurelia-framework "^1.0.0"
+    moment "^2.18.1"
+
 "@types/jasmine@^2.2.0":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.2.tgz#6ae4d8740c0da5d5a627df725b4eed71b8e36668"
@@ -145,7 +250,7 @@ ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-0.2.1.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
 
-ansi-regex@^2.0.0:
+ansi-regex@^2.0.0, ansi-regex@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
 
@@ -161,7 +266,7 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.1.0, ansi-styles@^3.2.0:
+ansi-styles@^3.0.0, ansi-styles@^3.1.0, ansi-styles@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
@@ -566,9 +671,9 @@ aurelia-router@^1.0.1:
     aurelia-path "^1.0.0"
     aurelia-route-recognizer "^1.0.0"
 
-aurelia-store@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/aurelia-store/-/aurelia-store-0.4.0.tgz#15e938486e18c85c795012a5b11071d327f280a7"
+aurelia-store@^0.5.1:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/aurelia-store/-/aurelia-store-0.5.3.tgz#9e36d2b5adfcc57d848abb9c1bc50cd6f51ba273"
   dependencies:
     aurelia-dependency-injection "^1.3.1"
     aurelia-framework "^1.1.2"
@@ -4416,6 +4521,15 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
+jest-diff@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-20.0.3.tgz#81f288fd9e675f0fb23c75f1c2b19445fe586617"
+  dependencies:
+    chalk "^1.1.3"
+    diff "^3.2.0"
+    jest-matcher-utils "^20.0.3"
+    pretty-format "^20.0.3"
+
 jest-diff@^21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-21.2.1.tgz#46cccb6cab2d02ce98bc314011764bb95b065b4f"
@@ -4442,6 +4556,13 @@ jest-jasmine2@21.2.1:
     jest-snapshot "^21.2.1"
     p-cancelable "^0.3.0"
 
+jest-matcher-utils@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-20.0.3.tgz#b3a6b8e37ca577803b0832a98b164f44b7815612"
+  dependencies:
+    chalk "^1.1.3"
+    pretty-format "^20.0.3"
+
 jest-matcher-utils@^21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-21.2.1.tgz#72c826eaba41a093ac2b4565f865eb8475de0f64"
@@ -4450,6 +4571,23 @@ jest-matcher-utils@^21.2.1:
     jest-get-type "^21.2.0"
     pretty-format "^21.2.1"
 
+jest-matchers@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-matchers/-/jest-matchers-20.0.3.tgz#ca69db1c32db5a6f707fa5e0401abb55700dfd60"
+  dependencies:
+    jest-diff "^20.0.3"
+    jest-matcher-utils "^20.0.3"
+    jest-message-util "^20.0.3"
+    jest-regex-util "^20.0.3"
+
+jest-message-util@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-20.0.3.tgz#6aec2844306fcb0e6e74d5796c1006d96fdd831c"
+  dependencies:
+    chalk "^1.1.3"
+    micromatch "^2.3.11"
+    slash "^1.0.0"
+
 jest-message-util@^21.2.1:
   version "21.2.1"
   resolved "https://registry.yarnpkg.com/jest-message-util/-/jest-message-util-21.2.1.tgz#bfe5d4692c84c827d1dcf41823795558f0a1acbe"
@@ -4457,6 +4595,10 @@ jest-message-util@^21.2.1:
     chalk "^2.0.1"
     micromatch "^2.3.11"
     slash "^1.0.0"
+
+jest-regex-util@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-regex-util/-/jest-regex-util-20.0.3.tgz#85bbab5d133e44625b19faf8c6aa5122d085d762"
 
 jest-regex-util@^21.2.0:
   version "21.2.0"
@@ -5132,6 +5274,10 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
 moment@2.x.x:
   version "2.19.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.4.tgz#17e5e2c6ead8819c8ecfad83a0acccb312e94682"
+
+moment@^2.18.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 ms@0.7.1:
   version "0.7.1"
@@ -6439,6 +6585,13 @@ pretty-error@^2.0.2:
   dependencies:
     renderkid "^2.0.1"
     utila "~0.4"
+
+pretty-format@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-20.0.3.tgz#020e350a560a1fe1a98dc3beb6ccffb386de8b14"
+  dependencies:
+    ansi-regex "^2.1.1"
+    ansi-styles "^3.0.0"
 
 pretty-format@^21.2.1:
   version "21.2.1"
