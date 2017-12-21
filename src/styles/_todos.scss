@@ -28,19 +28,21 @@ todo-list {
 }
 
 .todo {
-  &__save {
-    cursor: pointer;
-  }
+  
 }
 
 todo-actions {
   display: flex;
-}
+  
+  ux-input {
+    margin-right: 16px;
+  }
 
-todo-actions ux-input {
-  margin-right: 16px;
-}
+  ux-button {
+    -webkit-appearance: none!important;
+  }
 
-todo-actions input {
-  color: white;
+  input {
+    color: white;
+  }
 }
