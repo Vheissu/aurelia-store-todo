@@ -1,10 +1,7 @@
-import { Container } from 'aurelia-dependency-injection';
-import { Store } from 'aurelia-store';
-
 import { guid } from './helper';
 import colours from './colours';
 
-const store = Container.instance.get(Store);
+import store from './store';
 
 function addTodo(state, text) {
   const newTodo = {
