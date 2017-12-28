@@ -9,7 +9,7 @@
   </template>
   <template else>
     <div class="detail">
-      <ux-checkbox checked.bind="data.isComplete" change.delegate="completeTodo()" theme.bind="{border: '2px solid #333'}"></ux-checkbox>
+      <ux-checkbox checked.one-way="data.isComplete" click.delegate="completeTodo()" theme.bind="{border: '2px solid #333'}"></ux-checkbox>
     </div>
     <div class="list-content" dblclick.trigger="selectItem()">
       ${data.text}
